@@ -16,6 +16,6 @@ javad_sudoers:
         - mode: '0440'
         - check_cmd: /usr/sbin/visudo -c -f
         - require:
-            - user: javad
-            - pkg: sudo_package
+            - user: admin_user
+            - pkg: required_packages
 
