@@ -25,12 +25,12 @@ ssh_service:
     - require:
       - pkg: required_packages
 
-admin_javad:
+admin_user:
   user.present:
-    - name: salt
-    - fullname: saltstack
+    - name: javad
+    - fullname: javad hashemi
     - shell: /bin/bash
-    - home: /home/salt
+    - home: /home/javad
     - createhome: true
     - optional_groups:
       - sudo
