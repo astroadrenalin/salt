@@ -1,10 +1,13 @@
+include:
+    - base
+
 javad_ssh_key:
     ssh_auth.manage:
         - user: javad
         - source: salt://ssh_keys/javad.pub
         - config: .ssh/authorized_keys
         - require:
-            - user: javad
+            - user: admin_user
 
 javad_sudoers:
     file.managed:
