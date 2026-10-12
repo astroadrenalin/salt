@@ -25,5 +25,15 @@ ssh_service:
     - require:
       - pkg: required_packages
 
-add_admin_user:
+admin_javad:
+  user.present:
+    - name: salt
+    - fullname: saltstack
+    - shell: /bin/bash
+    - home: /home/salt
+    - createhome: true
+    - optional_groups:
+      - sudo
+    - require:
+      - pkg: required_packages
   
