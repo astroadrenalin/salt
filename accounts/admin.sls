@@ -4,7 +4,7 @@ include:
 javad_ssh_key:
     ssh_auth.manage:
         - user: javad
-        - source: salt://ssh_keys/javad.pub
+        - source: salt://ssh_keys/javad_admin.pub
         - config: .ssh/authorized_keys
         - require:
             - user: admin_user
