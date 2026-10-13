@@ -4,7 +4,8 @@ include:
 javad_ssh_key:
     ssh_auth.manage:
         - user: javad
-        - source: salt://ssh_keys/javad_admin.pub
+        - ssh_keys:
+            - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM72s2s4xBttIds/k5e/FTTiwOAtVjJxOeSE7n1Exd9z javad@Astro-Mac.local
         - config: .ssh/authorized_keys
         - require:
             - user: admin_user
